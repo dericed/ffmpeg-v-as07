@@ -21,5 +21,5 @@ xml edit -N "mt=https://mediaarea.net/mediatrace" -d //@offset -d //@size remuxe
 xml edit -N "mt=https://mediaarea.net/mediatrace" -d //@offset -d //@size ffmpeg_sample.xml   > ffmpeg_sample_no_offset_no_size.xml
 
 # create a patch to show the structural difference between the AS07 sample and the remuxed sample
-diff -Naur as07_no_offset_no_size.xml remuxed_no_offset_no_size.xml         > remuxed_v_as07.patch
-diff -Naur as07_no_offset_no_size.xml ffmpeg_sample_no_offset_no_size.xml   > newsample_v_as07.patch
+diff -Naur remuxed_no_offset_no_size.xml as07_no_offset_no_size.xml         > remuxed_v_as07.patch
+diff -Naur ffmpeg_sample_no_offset_no_size.xml as07_no_offset_no_size.xml   > newsample_v_as07.patch
